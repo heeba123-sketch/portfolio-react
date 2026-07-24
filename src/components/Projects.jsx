@@ -18,16 +18,6 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Tableau de bord Machine Learning',
-      category: 'ai',
-      icon: <Brain size={32} />,
-      description: "Application interactive d'exploration de données et de prédictions basée sur des algorithmes de Machine Learning, développée en Python et hébergée sur Streamlit.",
-      tags: ['Python', 'Machine Learning', 'Streamlit', 'Data Science'],
-      github: 'https://github.com/heeba123-sketch',
-      demo: 'https://projectml-mhjf6flawkkxxaihywexas.streamlit.app/'
-    },
-    {
-      id: 3,
       title: 'Système de Gestion de Restaurant',
       category: 'frontend',
       icon: <Utensils size={32} />,
@@ -37,7 +27,7 @@ const Projects = () => {
       demo: 'https://heeba123-sketch.github.io/oumo-koura/'
     },
     {
-      id: 4,
+      id: 3,
       title: 'Site Web Agence de Voyage',
       category: 'frontend',
       icon: <Plane size={32} />,
@@ -47,7 +37,7 @@ const Projects = () => {
       demo: 'https://heeba123-sketch.github.io/travel__essafwa/'
     },
     {
-      id: 5,
+      id: 4,
       title: 'Application Météo',
       category: 'fullstack',
       icon: <CloudSun size={32} />,
@@ -92,7 +82,7 @@ const Projects = () => {
             className={`filter-btn ${filter === 'ai' ? 'active' : ''}`}
             onClick={() => setFilter('ai')}
           >
-            IA & ML
+            IA
           </button>
         </div>
         
