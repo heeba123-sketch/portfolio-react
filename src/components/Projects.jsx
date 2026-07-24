@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Code, Utensils, Plane, CloudSun } from 'lucide-react';
+import { ExternalLink, Code, Utensils, Plane, CloudSun, Brain, FileSearch } from 'lucide-react';
 import './Projects.css';
 
 const Projects = () => {
@@ -8,6 +8,26 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Scanner de CV avec IA',
+      category: 'ai',
+      icon: <FileSearch size={32} />,
+      description: "Application intelligente d'analyse et de scoring de CV en fonction d'offres d'emploi. Utilise des modèles d'intelligence artificielle pour extraire les compétences clés et suggérer des améliorations.",
+      tags: ['React', 'Tailwind CSS', 'IA & LLM', 'APIs'],
+      github: 'https://github.com/heeba123-sketch',
+      demo: 'https://ai-resume-scanner-six.vercel.app/'
+    },
+    {
+      id: 2,
+      title: 'Tableau de bord Machine Learning',
+      category: 'ai',
+      icon: <Brain size={32} />,
+      description: "Application interactive d'exploration de données et de prédictions basée sur des algorithmes de Machine Learning, développée en Python et hébergée sur Streamlit.",
+      tags: ['Python', 'Machine Learning', 'Streamlit', 'Data Science'],
+      github: 'https://github.com/heeba123-sketch',
+      demo: 'https://projectml-mhjf6flawkkxxaihywexas.streamlit.app/'
+    },
+    {
+      id: 3,
       title: 'Système de Gestion de Restaurant',
       category: 'frontend',
       icon: <Utensils size={32} />,
@@ -17,7 +37,7 @@ const Projects = () => {
       demo: 'https://heeba123-sketch.github.io/oumo-koura/'
     },
     {
-      id: 2,
+      id: 4,
       title: 'Site Web Agence de Voyage',
       category: 'frontend',
       icon: <Plane size={32} />,
@@ -27,7 +47,7 @@ const Projects = () => {
       demo: 'https://heeba123-sketch.github.io/travel__essafwa/'
     },
     {
-      id: 3,
+      id: 5,
       title: 'Application Météo',
       category: 'fullstack',
       icon: <CloudSun size={32} />,
@@ -67,6 +87,12 @@ const Projects = () => {
             onClick={() => setFilter('fullstack')}
           >
             Full Stack
+          </button>
+          <button 
+            className={`filter-btn ${filter === 'ai' ? 'active' : ''}`}
+            onClick={() => setFilter('ai')}
+          >
+            IA & ML
           </button>
         </div>
         
