@@ -13,11 +13,21 @@ const Projects = () => {
       icon: <FileSearch size={32} />,
       description: "Application intelligente d'analyse et de scoring de CV en fonction d'offres d'emploi. Utilise des modèles d'intelligence artificielle pour extraire les compétences clés et suggérer des améliorations.",
       tags: ['React', 'Tailwind CSS', 'IA & LLM', 'APIs'],
-      github: 'https://github.com/heeba123-sketch',
+      github: 'https://github.com/heeba123-sketch/Ai_Resume-Scanner',
       demo: 'https://ai-resume-scanner-six.vercel.app/'
     },
     {
       id: 2,
+      title: 'Prédiction de Fraîcheur des Fruits & Légumes',
+      category: 'ai',
+      icon: <Brain size={32} />,
+      description: "Application intelligente basée sur des algorithmes de Machine Learning permettant de prédire le niveau de fraîcheur des fruits et légumes. Développée en Python et déployée avec Streamlit.",
+      tags: ['Python', 'Machine Learning', 'Streamlit', 'Data Science'],
+      github: 'https://github.com/heeba123-sketch/project_ML',
+      demo: 'https://projectml-mhjf6flawkkxxaihywexas.streamlit.app/'
+    },
+    {
+      id: 3,
       title: 'Système de Gestion de Restaurant',
       category: 'frontend',
       icon: <Utensils size={32} />,
@@ -27,7 +37,7 @@ const Projects = () => {
       demo: 'https://heeba123-sketch.github.io/oumo-koura/'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Site Web Agence de Voyage',
       category: 'frontend',
       icon: <Plane size={32} />,
@@ -37,7 +47,7 @@ const Projects = () => {
       demo: 'https://heeba123-sketch.github.io/travel__essafwa/'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Application Météo',
       category: 'fullstack',
       icon: <CloudSun size={32} />,
@@ -82,7 +92,7 @@ const Projects = () => {
             className={`filter-btn ${filter === 'ai' ? 'active' : ''}`}
             onClick={() => setFilter('ai')}
           >
-            IA
+            IA & ML
           </button>
         </div>
         
