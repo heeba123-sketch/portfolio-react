@@ -58,7 +58,7 @@ const Contact = () => {
               <div className="contact-icon"><GraduationCap size={24} /></div>
               <div className="contact-details">
                 <h3>Formation</h3>
-                <p>OFPPT - Développement Digital</p>
+                <p>Développement Digital</p>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ const Footer = () => {
               Portfo<span>lio</span>
             </div>
             <p>
-              Portfolio d'une développeuse full stack étudiante à l'OFPPT, passionnée par le développement web et les nouvelles technologies.
+              Portfolio d'une développeuse full stack, passionnée par le développement web et les nouvelles technologies.
             </p>
             <div className="social-links">
               <a href="https://github.com/heeba123-sketch" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         
         <div className="copyright border-top">
-          <p>&copy; {new Date().getFullYear()} Hiba Zobid. Tous droits réservés. | Étudiante OFPPT - Développement Digital</p>
+          <p>&copy; {new Date().getFullYear()} Hiba Zobid. Tous droits réservés. | Développeuse Full Stack</p>
         </div>
       </div>
     </footer>

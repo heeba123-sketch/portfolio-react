@@ -23,7 +23,7 @@ const Formations = () => {
             <h3 className="formation-title">Technicienne Spécialisée en Développement Digital</h3>
             
             <div className="formation-meta">
-              <span><GraduationCap size={16} /> OFPPT - Institut Spécialisé de Gestion et d'Informatique</span>
+              <span><GraduationCap size={16} /> Institut Spécialisé de Gestion et d'Informatique</span>
               <span><MapPin size={16} /> Casablanca, Maroc</span>
               <span><Calendar size={16} /> 2024 – 2026</span>
             </div>

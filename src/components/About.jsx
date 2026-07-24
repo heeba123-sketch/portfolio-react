@@ -24,7 +24,7 @@ const About = () => {
 
           <div className="about-text">
             <p>
-              Développeuse Full Stack junior, diplômée en Développement Digital (OFPPT, 2026).
+              Développeuse Full Stack junior, diplômée en Développement Digital (2026).
               J'ai acquis des bases solides en frontend et backend, et je m'intéresse
               particulièrement à l'intégration de l'IA dans les applications web.
             </p>

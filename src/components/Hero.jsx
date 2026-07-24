@@ -48,7 +48,7 @@ const Hero = () => {
             </motion.h1>
             
             <motion.p variants={itemVariants} className="hero-subtitle">
-              — Étudiante OFPPT - Développement Digital —
+              — Développement Digital —
             </motion.p>
             
             <motion.p variants={itemVariants} className="hero-status">
