@@ -1,48 +1,33 @@
 import React from 'react';
-import { Code2, Server, Database, Terminal } from 'lucide-react';
+import { Globe, Code, Database, Wrench, Layers } from 'lucide-react';
 import './Skills.css';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend',
-      icon: <Code2 size={24} />,
-      skills: [
-        { name: 'React.js', level: 90 },
-        { name: 'HTML5/CSS3', level: 95 },
-        { name: 'JavaScript (ES6+)', level: 85 },
-        { name: 'Bootstrap / Tailwind', level: 90 }
-      ]
+      icon: <Globe size={32} strokeWidth={1.5} />,
+      skills: ['React.js', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Tailwind CSS', 'Responsive Design']
     },
     {
       title: 'Backend',
-      icon: <Server size={24} />,
-      skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 85 },
-        { name: 'PHP & Laravel', level: 80 },
-        { name: 'Python', level: 70 }
-      ]
+      icon: <Code size={32} strokeWidth={1.5} />,
+      skills: ['Node.js', 'PHP', 'Laravel', 'REST API', 'GraphQL']
     },
     {
-      title: 'API & Base de données',
-      icon: <Database size={24} />,
-      skills: [
-        { name: 'API REST', level: 90 },
-        { name: 'GraphQL', level: 75 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'MySQL / PostgreSQL', level: 85 }
-      ]
+      title: 'Bases de données',
+      icon: <Database size={32} strokeWidth={1.5} />,
+      skills: ['MySQL', 'MongoDB']
     },
     {
-      title: 'Outils & DevOps',
-      icon: <Terminal size={24} />,
-      skills: [
-        { name: 'Git / GitHub', level: 92 },
-        { name: 'Docker', level: 65 },
-        { name: 'Agile / Scrum', level: 80 },
-        { name: 'VS Code', level: 95 }
-      ]
+      title: 'Outils',
+      icon: <Wrench size={32} strokeWidth={1.5} />,
+      skills: ['Git & GitHub', 'Docker', 'Postman', 'SonarQube']
+    },
+    {
+      title: 'Architecture',
+      icon: <Layers size={32} strokeWidth={1.5} />,
+      skills: ['HOPEX (méta-modélisation)', 'Architecture logicielle']
     }
   ];
 
@@ -50,7 +35,7 @@ const Skills = () => {
     <section className="skills" id="skills">
       <div className="container">
         <div className="section-title">
-          <h2>Mes Compétences</h2>
+          <h2>COMPÉTENCES</h2>
         </div>
         
         <div className="skills-grid">
@@ -63,18 +48,7 @@ const Skills = () => {
               
               <div className="skills-list">
                 {category.skills.map((skill, idx) => (
-                  <div key={idx} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar-bg">
-                      <div 
-                        className="skill-bar-fill" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                  <span key={idx} className="skill-tag">{skill}</span>
                 ))}
               </div>
             </div>

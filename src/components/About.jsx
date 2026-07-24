@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Briefcase, Code } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import './About.css';
 
 const About = () => {
@@ -7,44 +7,54 @@ const About = () => {
     <section className="about" id="about">
       <div className="container">
         <div className="section-title">
-          <h2>À propos de moi</h2>
+          <h2>À PROPOS</h2>
         </div>
         
         <div className="about-content">
-          <div className="about-text glass-card">
-            <h3>Étudiante en développement digital à l'OFPPT</h3>
+          <div className="about-image-wrapper">
+            <div className="about-image-bg">
+              <img 
+                src="/profile.jpeg" 
+                onError={(e) => { e.target.onerror = null; e.target.src = "/profile.jpg"; }}
+                alt="Hiba Zobid" 
+                className="profile-img" 
+              />
+            </div>
+          </div>
+
+          <div className="about-text">
             <p>
-              Je suis une développeuse full stack passionnée par la création d'applications web innovantes. 
-              Actuellement en formation à l'OFPPT, je me spécialise dans le développement digital avec une 
-              approche pratique et orientée projet.
+              Développeuse Full Stack junior, diplômée en Développement Digital (OFPPT, 2026).
+              J'ai acquis des bases solides en frontend et backend, et je m'intéresse
+              particulièrement à l'intégration de l'IA dans les applications web.
             </p>
             <p>
-              Mon parcours m'a permis d'acquérir des compétences solides en développement web (React, Node.js), 
-              en gestion de bases de données et en conception d'interfaces utilisateur interactives. 
-              J'aime relever des défis techniques et créer des solutions qui allient esthétique et fonctionnalité.
+              Durant mon stage chez Bizzdesign, j'ai développé une preuve de concept intégrant
+              l'intelligence artificielle à la plateforme HOPEX, avec conception d'APIs GraphQL et
+              interfaces React.js. J'ai aussi obtenu les certifications HOPEX Administration & Sécurité.
             </p>
-            
-            <div className="about-stats">
-              <div className="stat-item">
-                <div className="stat-icon"><Briefcase size={24} /></div>
-                <div>
-                  <div className="stat-number">12+</div>
-                  <div className="stat-text">Projets réalisés</div>
-                </div>
+            <p>
+              Aujourd'hui, je suis à la recherche d'un poste de développeuse full stack pour mettre
+              en œuvre des solutions techniques robustes au sein d'une équipe agile. Mon objectif
+              : contribuer concrètement à des projets ambitieux et continuer à progresser.
+            </p>
+            <p>
+              Vous cherchez un profil curieux, opérationnel sur le développement web full stack,
+              trilingue (Arabe, Français, Anglais) et prêt à s'investir dans votre équipe ?
+            </p>
+            <p className="highlight-text">
+              <strong>Je suis votre prochaine développeuse !</strong>
+            </p>
+
+            <div className="about-contact">
+              <div className="contact-item">
+                <Mail size={16} /> hibazobid134@gmail.com
               </div>
-              <div className="stat-item">
-                <div className="stat-icon"><Award size={24} /></div>
-                <div>
-                  <div className="stat-number">100%</div>
-                  <div className="stat-text">Satisfaction</div>
-                </div>
+              <div className="contact-item">
+                <Phone size={16} /> 0777 898 313
               </div>
-              <div className="stat-item">
-                <div className="stat-icon"><Code size={24} /></div>
-                <div>
-                  <div className="stat-number">15+</div>
-                  <div className="stat-text">Technologies</div>
-                </div>
+              <div className="contact-item">
+                <MapPin size={16} /> Casablanca, Maroc
               </div>
             </div>
           </div>

@@ -1,50 +1,75 @@
 import React from 'react';
-import { ArrowRight, Download } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Mail } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
     <section className="hero" id="home">
+      {/* Hero Background Elements */}
+      <div className="hero-bg-glow glow-1"></div>
+      <div className="hero-bg-glow glow-2"></div>
+      <div className="hero-bg-ring ring-1"></div>
+      <div className="hero-bg-ring ring-2"></div>
+
+      {/* Floating Tech Badges in Background */}
+      <div className="hero-floating-badge badge-left-1">&lt; React.js /&gt;</div>
+      <div className="hero-floating-badge badge-left-2">&#123; Node.js &#125;</div>
+      <div className="hero-floating-badge badge-right-1">GraphQL</div>
+      <div className="hero-floating-badge badge-right-2">Full Stack</div>
+
       <div className="container">
-        <div className="hero-content">
-          <div className="hero-text">
-            <div className="badge glass-card">
-              <span className="dot"></span>
-              Étudiante OFPPT - Développement Digital
-            </div>
+        <div className="hero-content-centered">
+          <motion.div 
+            className="hero-text-centered"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h2 variants={itemVariants} className="hero-name">
+              HIBA ZOBID
+            </motion.h2>
             
-            <h1>
-              Bonjour, je suis <br />
-              <span className="highlight">Hiba Zobid</span>
-            </h1>
+            <motion.h1 variants={itemVariants} className="hero-title">
+              DÉVELOPPEUSE FULL STACK JUNIOR
+            </motion.h1>
             
-            <h2>Développeuse Full Stack</h2>
+            <motion.p variants={itemVariants} className="hero-subtitle">
+              — Étudiante OFPPT - Développement Digital —
+            </motion.p>
             
-            <p>
-              Étudiante passionnée en développement digital à l'OFPPT, je me spécialise 
-              dans la création d'applications web modernes et performantes. Je maîtrise 
-              les technologies frontend et backend (React, Node.js, Express) pour offrir 
-              des solutions digitales complètes et innovantes.
-            </p>
+            <motion.p variants={itemVariants} className="hero-status">
+              Actuellement à la recherche d'une alternance ou d'opportunité de travail
+            </motion.p>
             
-            <div className="hero-actions">
+            <motion.div variants={itemVariants} className="hero-actions-centered">
               <a href="#projects" className="btn btn-primary">
-                Voir mes projets <ArrowRight size={20} />
+                PROJETS
               </a>
-              <a href="#contact" className="btn btn-outline">
-                Me contacter
+              <a href="#contact" className="btn btn-primary">
+                CONTACT
               </a>
-            </div>
-          </div>
-          
-          <div className="hero-image-container">
-            <div className="hero-shape glass-card">
-              {/* Optional: Add a profile image here */}
-              <div className="placeholder-image">
-                <span>HZ</span>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="hero-socials">
+              <a href="#" className="social-icon">IN</a>
+              <a href="#" className="social-icon">GH</a>
+              <a href="#" className="social-icon"><Mail size={20} /></a>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,26 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Colors - Light/Beige with Blue theme */
-  --bg-primary: #fdfbf7;      /* Warm white / beige */
-  --bg-secondary: #f4f1ea;    /* Slightly darker beige */
-  --text-primary: #1e293b;    /* Dark slate for readable text */
-  --text-secondary: #475569;  /* Lighter text */
+  /* Colors - Warm Beige & Terracotta Theme matching profile.jpeg */
+  --bg-primary: #faf6f0;      /* Warm off-white cream */
+  --bg-secondary: #f2e8dc;    /* Soft warm beige */
+  --text-primary: #2d221e;    /* Deep warm espresso brown */
+  --text-secondary: #665349;  /* Soft taupe brown */
   
-  --primary-blue: #2563eb;    /* Vibrant blue */
-  --primary-blue-hover: #1d4ed8;
-  --secondary-blue: #eff6ff;  /* Light blue background */
+  --primary-blue: #9e5d38;    /* Warm caramel / terracotta brown */
+  --primary-blue-hover: #754326;
+  --secondary-blue: #f5ebe1;  /* Warm light cream badge background */
   
-  --accent: #3b82f6;          /* Lighter blue accent */
+  --accent: #c47d4e;          /* Amber accent */
   
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.5);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(220, 205, 190, 0.5);
+  --glass-shadow: 0 4px 20px rgba(70, 50, 40, 0.06);
   
   /* Utilities */
-  --border-radius: 16px;
+  --border-radius: 12px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --bg-primary: #0a192f;
+  --bg-secondary: #112240;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  
+  --primary-blue: #3b82f6;
+  --primary-blue-hover: #60a5fa;
+  --secondary-blue: #1e3a8a;
+  
+  --accent: #60a5fa;
+  
+  --glass-bg: rgba(10, 25, 47, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -36,6 +53,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Typography */
@@ -62,8 +80,6 @@ ul {
 /* Glassmorphism Card Utility */
 .glass-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius);
   box-shadow: var(--glass-shadow);
@@ -72,7 +88,7 @@ ul {
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* Buttons */
@@ -81,7 +97,7 @@ ul {
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  border-radius: 30px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
@@ -92,13 +108,13 @@ ul {
 .btn-primary {
   background-color: var(--primary-blue);
   color: white;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-blue-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
 }
 
 .btn-outline {
@@ -114,7 +130,7 @@ ul {
 
 /* Sections */
 section {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .section-title {
@@ -123,20 +139,22 @@ section {
 }
 
 .section-title h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   display: inline-block;
   position: relative;
-  color: var(--primary-blue);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .section-title h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
+  width: 40px;
+  height: 3px;
   background-color: var(--primary-blue);
   border-radius: 2px;
 }
